@@ -15,7 +15,7 @@ let paleta = [
 
 // VARIABLES GLOBALES DE CALIBRACIÓN DE AUDIO (CONTROLADOR)
 
-let AMP_MIN = 0.002;
+let AMP_MIN = 0.01;
 let AMP_MAX = 0.035;
 let FREC_MIN = 110;  // sonido Grave 
 let FREC_MAX = 350;  // sonido Agudo 
