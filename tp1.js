@@ -1,11 +1,11 @@
 let trazos = [];
 let cantTrazos = 13;
-let escala = 0.4;        
+let escala = 0.2;        
 let escalaMin = 0.2;     // techo mínimo 
 let escalaMax = 0.8;     // techo máximo 
 let trazosEnPantalla = [];
 
-const MAX_FIGURAS = 40;  
+const MAX_FIGURAS = 25;  
 
 let paleta = [
   "#28b3a0", "#fec30e", "#e31d4e", "#e977a4", 
