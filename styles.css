@@ -1,15 +1,120 @@
-body {
-            background-color: #111111; 
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-        }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-        canvas {
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-            border-radius: 4px; 
-        }
+body {
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+}
+
+canvas {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+/* ── MENÚ ── */
+#menu {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  width: 400px;
+  background: rgba(18, 18, 18, 0.92);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 16px 18px 14px;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+.menu-titulo {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 14px;
+}
+
+.menu-fila {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.menu-fila label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.menu-fila input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu-fila input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.menu-fila input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-valor {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  min-width: 34px;
+  text-align: right;
+}
+
+.menu-separador {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+  margin: 12px 0 10px;
+}
+
+#btn-reiniciar {
+  width: 100%;
+  background: transparent;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 7px 0;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background 0.15s, color 0.15s;
+}
+
+#btn-reiniciar:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#btn-reiniciar:active {
+  transform: scale(0.97);
+}
