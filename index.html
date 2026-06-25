@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1 Arte Generativo </title>
+    <title>TP1 Arte Generativo</title>
     <link rel="stylesheet" href="styles.css">
     <script src="librerias/p5.min.js"></script>
     <script src="librerias/p5.sound.min.js"></script>
@@ -12,5 +12,32 @@
     <script src="tp1.js"></script>
 </head>
 <body>
+
+  <div id="menu">
+    <p class="menu-titulo">Configuracion</p>
+
+    <div class="menu-fila">
+      <label for="ctrl-amp-min">Umbral de sonido</label>
+      <input type="range" id="ctrl-amp-min" min="0.01" max="0.30" step="0.01" value="0.12">
+      <span class="menu-valor" id="val-amp-min">0.12</span>
+    </div>
+
+    <div class="menu-fila">
+      <label for="ctrl-amp-max">Amplitud máxima</label>
+      <input type="range" id="ctrl-amp-max" min="0.01" max="0.20" step="0.005" value="0.035">
+      <span class="menu-valor" id="val-amp-max">0.035</span>
+    </div>
+
+    <div class="menu-fila">
+      <label for="ctrl-volumen">Sensibilidad vol.</label>
+      <input type="range" id="ctrl-volumen" min="0.5" max="0.99" step="0.01" value="0.90">
+      <span class="menu-valor" id="val-volumen">0.90</span>
+    </div>
+
+    <div class="menu-separador"></div>
+
+    <button id="btn-reiniciar">↺ Reiniciar</button>
+  </div>
+
 </body>
 </html>
